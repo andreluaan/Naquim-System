@@ -5,6 +5,26 @@
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
+
+.doc-skip {
+  position: fixed;
+  top: var(--ds-space-3);
+  left: var(--ds-space-3);
+  z-index: 1000;
+  padding: var(--ds-space-2) var(--ds-space-4);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-accent);
+  color: var(--ds-color-on-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+.doc-skip:focus-visible {
+  transform: none;
+  box-shadow: var(--ds-focus-ring);
+  outline: none;
+}
+
 body { transition: background-color var(--ds-duration-base) var(--ds-ease-out); }
 
 /* --- Shell ------------------------------------------------------------- */
@@ -180,8 +200,8 @@ body { transition: background-color var(--ds-duration-base) var(--ds-ease-out); 
 .doc-do, .doc-dont { padding: var(--ds-space-5); border-radius: var(--ds-radius-lg); border: 1px solid; font-size: var(--ds-text-sm); }
 .doc-do { border-color: var(--ds-color-success-border); background: var(--ds-color-success-soft); }
 .doc-dont { border-color: var(--ds-color-danger-border); background: var(--ds-color-danger-soft); }
-.doc-do h4 { color: var(--ds-color-success-text); } .doc-dont h4 { color: var(--ds-color-danger-text); }
-.doc-do h4, .doc-dont h4 { font-family: var(--ds-font-body); font-size: var(--ds-text-sm); letter-spacing: 0; margin-bottom: var(--ds-space-2); }
+.doc-do h3 { color: var(--ds-color-success-text); } .doc-dont h3 { color: var(--ds-color-danger-text); }
+.doc-do h3, .doc-dont h3 { font-family: var(--ds-font-body); font-size: var(--ds-text-sm); letter-spacing: 0; margin-bottom: var(--ds-space-2); }
 .doc-dodont ul { margin: 0; padding-left: var(--ds-space-5); color: var(--ds-color-text); }
 .doc-dodont li + li { margin-top: var(--ds-space-1); }
 

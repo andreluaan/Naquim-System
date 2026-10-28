@@ -1,6 +1,6 @@
 import { OPTIONS } from '../lab.js';
 import { contrast, contrastLabel, resolveVarColor, toast, copy } from '../utils.js';
-import { frame, fullSite, mountSiteDemos, setFrameWidth, TEMPLATES, TEMPLATE_BRANDS } from '../site-kit.js';
+import { frame, fullSite, mountSiteDemos, setFrameWidth, siteSections, TEMPLATES, TEMPLATE_BRANDS, TEMPLATE_INFO } from '../site-kit.js';
 
 const MENU_ID = 'sumi-menu-completo';
 const DEFAULTS = { template: 'vitrine', ...TEMPLATE_BRANDS.vitrine, text: 1, space: 1 };
@@ -51,6 +51,15 @@ const fonts = () => `
       </button>`).join('')}
   </div>`;
 
+const models = () => `
+  <div class="viz-models" role="radiogroup" aria-label="Modelo do site">
+    ${TEMPLATES.map(([id, name]) => `
+      <button class="viz-model" role="radio" aria-checked="false" data-choice="template" data-value="${id}">
+        <strong>${name}</strong>
+        <span>${TEMPLATE_INFO[id]}</span>
+      </button>`).join('')}
+  </div>`;
+
 const tool = (action, icon, label) => `
   <button class="ds-btn ds-btn--ghost ds-btn--sm viz-tool" data-action="${action}"><ds-icon name="${icon}"></ds-icon> <span>${label}</span></button>`;
 
@@ -60,15 +69,16 @@ export default {
   title: 'Site completo',
   wide: true,
   keywords: 'site completo landing page exemplo modelo template editorial visualizador marca tema cores fonte cantos tela cheia',
-  lead: 'Todas as seções num site. Escolha o modelo, vista-o com outra marca e copie o tema.',
+  lead: 'Quatro modelos de site montados só com o Nanquim. Escolha um, vista-o com a sua marca e copie o tema.',
   render: () => `
     <div class="viz" data-viz>
+      ${models()}
       <aside class="viz-panel" id="viz-panel" aria-label="Ajustes da marca">
         <header class="viz-panel-head">
           <strong>Editar marca</strong>
           <button class="ds-btn ds-btn--ghost ds-btn--icon ds-btn--sm" data-action="panel" aria-label="Fechar painel"><ds-icon name="x"></ds-icon></button>
         </header>
-        <section class="viz-group">
+        <section class="viz-group viz-group--fullscreen">
           <h2>Modelo</h2>
           ${segmented('template', TEMPLATES, 'Modelo do site')}
         </section>
@@ -81,16 +91,16 @@ export default {
           </details>
         </section>
         <section class="viz-group">
+          <h2>Modo</h2>
+          ${segmented('mode', OPTIONS.mode.items.map((item) => [item.id, item.name]), 'Modo')}
+        </section>
+        <section class="viz-group">
           <h2>Fonte</h2>
           ${fonts()}
         </section>
         <section class="viz-group">
           <h2>Forma</h2>
           ${slider('radius')}${slider('text')}${slider('space')}
-        </section>
-        <section class="viz-group">
-          <h2>Modo</h2>
-          ${segmented('mode', OPTIONS.mode.items.map((item) => [item.id, item.name]), 'Modo')}
         </section>
         <details class="viz-more viz-contrast-box">
           <summary>Contraste <span data-contrast-summary></span></summary>
@@ -102,6 +112,10 @@ export default {
         </div>
       </aside>
       <div class="viz-stage">
+        <nav class="viz-sections" aria-label="Seções deste modelo">
+          <span class="viz-sections-label">Seções deste modelo</span>
+          <ol data-sections></ol>
+        </nav>
         ${frame({
           content: fullSite(MENU_ID, DEFAULTS.template),
           className: 'site-frame--scroll',
@@ -155,6 +169,27 @@ export default {
       page.innerHTML = fullSite(MENU_ID, state.template);
       page.scrollTop = 0;
       renderedTemplate = state.template;
+      renderSections();
+    }
+
+    function renderSections() {
+      viz.querySelector('[data-sections]').innerHTML = siteSections(state.template)
+        .map((name) => `<li><button class="viz-section-link" data-section="${name}">${name}</button></li>`).join('');
+    }
+
+    // Na tela cheia o site rola dentro da moldura; fora dela quem rola é a página, abaixo da barra de seções fixa.
+    function scrollToSection(name) {
+      const target = page.querySelector(`[data-site-section="${name}"]`);
+      if (!target) return;
+      const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+      if (page.scrollHeight > page.clientHeight) {
+        const top = target.getBoundingClientRect().top - page.getBoundingClientRect().top + page.scrollTop;
+        page.scrollTo({ top, behavior });
+      } else {
+        const bar = viz.querySelector('.viz-sections');
+        const barBottom = Number.parseFloat(getComputedStyle(bar).top) + bar.offsetHeight;
+        window.scrollBy({ top: target.getBoundingClientRect().top - barBottom, behavior });
+      }
     }
 
     function apply() {
@@ -231,6 +266,9 @@ export default {
         apply();
       }
 
+      const section = e.target.closest('[data-section]');
+      if (section) scrollToSection(section.dataset.section);
+
       const action = e.target.closest('[data-action]')?.dataset.action;
       if (action === 'copy') copy(themeCss(), 'Tema copiado');
       if (action === 'reset') {
@@ -272,6 +310,7 @@ export default {
       setCustomColor('pigment', Number(params.get('concentracao') ?? 0.5));
       setCustomColor('water', Number(params.get('agua') ?? 0.8));
     }
+    renderSections();
     apply();
     if (params.has('tela-cheia')) setFullscreen(true);
 

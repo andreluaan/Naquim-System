@@ -1637,6 +1637,122 @@ ds-carousel[variant="overlay"] .carousel-demo-slide figcaption {
   scrollbar-width: thin;
 }
 
+/* O modelo é a primeira escolha: fica em destaque acima de tudo, com o público de cada um. */
+.viz-models {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--ds-space-3);
+}
+
+.viz-model {
+  display: grid;
+  align-content: start;
+  gap: var(--ds-space-1);
+  padding: var(--ds-space-4);
+  border: 1px solid var(--ds-color-border-subtle);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-text-sm);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color var(--ds-duration-fast) var(--ds-ease-out),
+    background-color var(--ds-duration-fast) var(--ds-ease-out);
+}
+
+.viz-model strong {
+  font-family: var(--ds-font-display);
+  font-size: var(--ds-text-lg);
+  font-weight: var(--ds-weight-semibold);
+  color: var(--ds-color-text);
+}
+
+.viz-model:hover {
+  background: var(--ds-color-surface-hover);
+}
+
+.viz-model[aria-checked="true"] {
+  border-color: var(--ds-color-text);
+  background: var(--ds-color-surface-raised);
+  box-shadow: var(--ds-shadow-sm);
+}
+
+.viz-model:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+}
+
+/* Fora da tela cheia o modelo é escolhido nos cartões acima; o grupo do painel só aparece na gaveta. */
+.viz-panel .viz-group--fullscreen {
+  display: none;
+}
+
+.viz:not([data-fullscreen]) .viz-group--fullscreen + .viz-group {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.viz-stage {
+  display: grid;
+  gap: var(--ds-space-3);
+  min-width: 0;
+}
+
+/* O site de exemplo é longo: o índice fica preso no topo enquanto ele passa por baixo. */
+.viz-sections {
+  position: sticky;
+  top: var(--ds-space-16);
+  z-index: calc(var(--ds-z-sticky) + 1);
+  display: flex;
+  align-items: baseline;
+  gap: var(--ds-space-3);
+  padding-block: var(--ds-space-2);
+  background: var(--ds-color-bg);
+  min-width: 0;
+  font-size: var(--ds-text-xs);
+}
+
+.viz-sections-label {
+  flex-shrink: 0;
+  font-weight: var(--ds-weight-semibold);
+  letter-spacing: var(--ds-tracking-wide);
+  text-transform: uppercase;
+  color: var(--ds-color-text-muted);
+}
+
+.viz-sections ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.viz-section-link {
+  min-height: var(--ds-space-8);
+  padding: 0 var(--ds-space-3);
+  border: 1px solid var(--ds-color-border-subtle);
+  border-radius: var(--ds-radius-full);
+  background: transparent;
+  color: var(--ds-color-text-muted);
+  font-size: var(--ds-text-xs);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.viz-section-link:hover {
+  border-color: var(--ds-color-border-strong);
+  color: var(--ds-color-text);
+}
+
+.viz-section-link:focus-visible {
+  outline: none;
+  box-shadow: var(--ds-focus-ring);
+}
+
 .viz-panel-head {
   display: none;
   align-items: center;
@@ -1818,10 +1934,16 @@ ds-carousel[variant="overlay"] .carousel-demo-slide figcaption {
   color: var(--ds-color-danger-text);
 }
 
+/* As ações ficam presas ao pé do painel: copiar o tema nunca some ao rolar os ajustes. */
 .viz-actions {
+  position: sticky;
+  bottom: calc(var(--ds-space-4) * -1);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--ds-space-2);
+  margin-bottom: calc(var(--ds-space-4) * -1);
+  padding-bottom: var(--ds-space-4);
+  background: var(--ds-color-surface);
 }
 
 .viz-actions .ds-btn {
@@ -1870,6 +1992,15 @@ ds-carousel[variant="overlay"] .carousel-demo-slide figcaption {
   display: flex;
 }
 
+.viz[data-fullscreen] .viz-panel .viz-group--fullscreen {
+  display: grid;
+}
+
+.viz[data-fullscreen] .viz-models,
+.viz[data-fullscreen] .viz-sections {
+  display: none;
+}
+
 .viz[data-fullscreen] .viz-panel {
   position: fixed;
   top: var(--ds-space-16);
@@ -1905,6 +2036,28 @@ html:has(.viz[data-fullscreen]) {
     position: static;
     max-height: none;
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+
+  .viz-models {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .viz-actions {
+    position: static;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .viz-models {
+    grid-template-columns: 1fr;
+  }
+
+  .viz-sections {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--ds-space-2);
   }
 }
 

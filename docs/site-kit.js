@@ -486,6 +486,14 @@ export const resources = () => `
 
 export const TEMPLATES = [['editorial', 'Editorial'], ['vitrine', 'Vitrine'], ['grade', 'Grade'], ['classico', 'Clássico']];
 
+// Para quem cada modelo serve: aparece no seletor de modelos do visualizador.
+export const TEMPLATE_INFO = {
+  editorial: 'Estúdio ou portfólio: manifesto, serviços e projetos.',
+  vitrine: 'Loja: categorias, vantagens e produtos.',
+  grade: 'Produto ou ferramenta: ideias e recursos em grade.',
+  classico: 'Serviço direto: recursos, preços e chamada.',
+};
+
 // A identidade que cada modelo pede: escolher o modelo no visualizador aplica isto, e tudo continua editável.
 export const TEMPLATE_BRANDS = {
   editorial: { theme: 'nanquim', font: 'editorial', mode: 'dark', radius: 1 },
@@ -494,16 +502,61 @@ export const TEMPLATE_BRANDS = {
   classico: { theme: 'nanquim', font: 'editorial', mode: 'dark', radius: 1 },
 };
 
+// Cada modelo é uma lista de seções com nome: o nome vira o índice "Seções deste modelo".
 const SITES = {
-  classico: (menuId) => navbar({ menuId }) + hero() + features() + pricing() + testimonials() + faq() + cta() + footer(),
-  editorial: (menuId) => navbar({ menuId, editorial: true }) + heroEditorial() + statement() + services() + works() + stats()
-    + testimonials({ alt: true, carousel: true }) + pricing() + faq({ alt: true }) + cta() + footer({ wordmark: true }),
-  vitrine: (menuId) => announcement() + navbarCenter({ menuId }) + heroPoster() + categories() + banner() + perks() + products()
-    + testimonials({ alt: true, carousel: true }) + faq() + footer({ wordmark: true }),
-  grade: (menuId) => heroFramed({ menuId }) + philosophy() + resources() + testimonials({ alt: false, carousel: true }) + faq({ alt: true }) + cta() + footer(),
+  classico: [
+    ['Menu', (menuId) => navbar({ menuId })],
+    ['Abertura', () => hero()],
+    ['Recursos', () => features()],
+    ['Preços', () => pricing()],
+    ['Depoimentos', () => testimonials()],
+    ['Perguntas', () => faq()],
+    ['Chamada', () => cta()],
+    ['Rodapé', () => footer()],
+  ],
+  editorial: [
+    ['Menu', (menuId) => navbar({ menuId, editorial: true })],
+    ['Abertura', () => heroEditorial()],
+    ['Manifesto', () => statement()],
+    ['Serviços', () => services()],
+    ['Projetos', () => works()],
+    ['Números', () => stats()],
+    ['Depoimentos', () => testimonials({ alt: true, carousel: true })],
+    ['Preços', () => pricing()],
+    ['Perguntas', () => faq({ alt: true })],
+    ['Chamada', () => cta()],
+    ['Rodapé', () => footer({ wordmark: true })],
+  ],
+  vitrine: [
+    ['Aviso', () => announcement()],
+    ['Menu', (menuId) => navbarCenter({ menuId })],
+    ['Abertura', () => heroPoster()],
+    ['Categorias', () => categories()],
+    ['Destaque', () => banner()],
+    ['Vantagens', () => perks()],
+    ['Produtos', () => products()],
+    ['Depoimentos', () => testimonials({ alt: true, carousel: true })],
+    ['Perguntas', () => faq()],
+    ['Rodapé', () => footer({ wordmark: true })],
+  ],
+  grade: [
+    ['Abertura', (menuId) => heroFramed({ menuId })],
+    ['Ideias', () => philosophy()],
+    ['Recursos', () => resources()],
+    ['Depoimentos', () => testimonials({ alt: false, carousel: true })],
+    ['Perguntas', () => faq({ alt: true })],
+    ['Chamada', () => cta()],
+    ['Rodapé', () => footer()],
+  ],
 };
 
-export const fullSite = (menuId, template = 'editorial') => (SITES[template] ?? SITES.editorial)(menuId);
+const siteOf = (template) => SITES[template] ?? SITES.editorial;
+
+export const fullSite = (menuId, template = 'editorial') => siteOf(template)
+  .map(([name, section]) => section(menuId).replace(/<([a-z]+)/, `<$1 data-site-section="${name}"`))
+  .join('');
+
+export const siteSections = (template) => siteOf(template).map(([name]) => name);
 
 export const WIDTHS = [['full', 'Computador'], ['768', 'Tablet'], ['390', 'Celular']];
 

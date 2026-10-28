@@ -13,6 +13,7 @@ const ITEMS = [
   { name: 'Documentação enxuta e cópia do valor dos tokens', status: 'feito' },
   { name: 'Modelo editorial do site, novas seções e tela cheia com gaveta de edição', status: 'feito' },
   { name: 'Paletas derivadas do nanquim (aguada), Laboratório de paletas e modelos Vitrine e Grade', status: 'feito' },
+  { name: 'Site completo organizado por modelo, índice de seções e auditoria de acessibilidade', status: 'feito' },
   { name: 'Pacote para usar em outros projetos (npm e CDN)', status: 'próximo' },
   { name: 'Primeiro site de cliente feito só com o Nanquim', status: 'depois' },
 ];

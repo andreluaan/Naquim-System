@@ -106,8 +106,8 @@ export function doDont(dos, donts) {
   const li = (arr) => arr.map((t) => `<li>${t}</li>`).join('');
   return `
     <div class="doc-dodont">
-      <div class="doc-do"><h4>✓ Faça</h4><ul>${li(dos)}</ul></div>
-      <div class="doc-dont"><h4>✕ Evite</h4><ul>${li(donts)}</ul></div>
+      <div class="doc-do"><h3>✓ Faça</h3><ul>${li(dos)}</ul></div>
+      <div class="doc-dont"><h3>✕ Evite</h3><ul>${li(donts)}</ul></div>
     </div>`;
 }
 

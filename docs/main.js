@@ -71,6 +71,12 @@ document.addEventListener('click', (e) => {
   if (token) copyToken(token.dataset.copyToken);
 });
 
+// O link de pular aponta para #content, mas o hash é a rota: foca o conteúdo sem trocar de página.
+document.getElementById('skip-link').addEventListener('click', (e) => {
+  e.preventDefault();
+  content.focus();
+});
+
 document.getElementById('menu-btn').addEventListener('click', () => sidebar.classList.toggle('is-open'));
 search.addEventListener('input', () => renderNav(search.value));
 window.addEventListener('hashchange', render);
