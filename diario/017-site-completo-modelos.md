@@ -31,7 +31,7 @@ Depois pedi para reorganizar a página "Site completo", que escondia o modelo, a
 ## Antes / depois
 | Antes (v0.13.1) | Depois (v0.14.0) |
 |---|---|
-| ![](evolucao/v0.13.1/03i-site-completo.png) | ![](prints/2026-10-28_site-completo-modelos/09m-site-completo.png) |
+| ![](evolucao/v0.13.1/03i-site-completo.png) | ![](evolucao/v0.14.0/03i-site-completo.png) |
 
 ## Aprendizados
 - A escolha que define as outras merece o lugar mais visível, não o primeiro item de um painel.

@@ -27,6 +27,7 @@ geradas a partir do próprio histórico com `npm run evolucao`.
 | [v0.12.0](#v0120--modelo-editorial-e-tela-cheia) | 2026-10-23 | Modelo editorial e tela cheia | 29 | 21 | Nanquim + 5 + marca de exemplo + cor livre |
 | [v0.13.0](#v0130--aguada-laboratório-de-paletas-vitrine-e-grade) | 2026-10-23 | Aguada, laboratório de paletas, Vitrine e Grade | 30 | 22 | Nanquim + 3 da aguada + marca de exemplo + cor livre |
 | [v0.13.1](#v0131--vitrine-padrão-e-painel-em-grade) | 2026-10-23 | Vitrine padrão e painel em grade | 30 | 22 | Nanquim + 3 da aguada + marca de exemplo + cor livre |
+| [v0.14.0](#v0140--site-completo-organizado-por-modelo) | 2026-10-28 | Site completo organizado por modelo | 30 | 22 | Nanquim + 3 da aguada + marca de exemplo + cor livre |
 
 ### A mesma tela em cada versão
 
@@ -274,6 +275,21 @@ Todas as paletas no modo claro, depois do ajuste:
 | Antes (v0.13.0) | Depois (v0.13.1) |
 |---|---|
 | ![](evolucao/v0.13.0/03i-site-completo.png) | ![](evolucao/v0.13.1/03i-site-completo.png) |
+
+---
+
+## v0.14.0 — Site completo organizado por modelo
+
+*2026-10-28 · tag `v0.14.0` · diário: [017](017-site-completo-modelos.md)*
+
+- Modelos do site em cartões, com o tipo de site para o qual cada um serve
+- Índice "Seções deste modelo", preso no topo, que leva a cada parte do site
+- Painel na ordem do impacto, com as ações presas ao pé
+- Acessibilidade da documentação em 100 no Lighthouse
+
+| Antes (v0.13.1) | Depois (v0.14.0) |
+|---|---|
+| ![](evolucao/v0.13.1/03i-site-completo.png) | ![](evolucao/v0.14.0/03i-site-completo.png) |
 
 ---
 
