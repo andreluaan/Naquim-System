@@ -56,18 +56,20 @@
 
   --ds-color-overlay: color-mix(in oklch, var(--ds-neutral-1) 72%, transparent);
 
-  /* Vermelhão do carimbo japonês: fixo em toda marca, como a tinta do selo numa pintura. */
-  --ds-color-seal: oklch(0.5 0.17 30);
-  --ds-color-on-seal: oklch(0.97 0.012 85);
+  /* O carimbo é só tinta e papel: inverte junto com o modo. */
+  --ds-color-seal: var(--ds-color-text);
+  --ds-color-on-seal: var(--ds-color-bg);
 
-  --ds-shadow-sm: inset 0 1px 0 var(--ds-highlight),
-    0 1px 2px hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 0.6));
-  --ds-shadow-md: inset 0 1px 0 var(--ds-highlight),
-    0 4px 12px -2px hsl(var(--ds-shadow-color) / var(--ds-shadow-strength)),
-    0 2px 4px -2px hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 0.6));
-  --ds-shadow-lg: inset 0 1px 0 var(--ds-highlight),
-    0 16px 40px -8px hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 1.2)),
-    0 4px 12px -4px hsl(var(--ds-shadow-color) / var(--ds-shadow-strength));
+  --ds-paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
+
+  /* Sombras de folha: curtas, deslocadas para um lado, como papel recortado sob uma luz só. */
+  --ds-shadow-sm: 1px 1px 0 hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 0.5)),
+    2px 3px 4px -1px hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 0.6));
+  --ds-shadow-md: 1px 1px 0 hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 0.5)),
+    4px 6px 8px -2px hsl(var(--ds-shadow-color) / var(--ds-shadow-strength));
+  --ds-shadow-lg: 1px 1px 0 hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 0.5)),
+    4px 6px 8px -2px hsl(var(--ds-shadow-color) / var(--ds-shadow-strength)),
+    10px 16px 20px -6px hsl(var(--ds-shadow-color) / var(--ds-shadow-strength));
 }
 
 /* No claro, a lógica inverte: fundo levemente acinzentado, superfícies brancas. */

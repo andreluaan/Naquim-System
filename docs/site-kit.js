@@ -1,5 +1,6 @@
 // Conteúdo do site de exemplo (Ateliê Sumi) e a moldura de navegador usada nas páginas de "Seções de site".
 import { enso, inkLandscape, inkDrop, brushStroke, inkWash } from './illustrations.js';
+import { PAPER_BRANDS, PAPER_INFO, PAPER_SITES, PAPER_TEMPLATES } from './site-paper.js';
 
 export const LINKS = ['Início', 'Projetos', 'Processo', 'Preços', 'Contato'];
 
@@ -484,7 +485,7 @@ export const resources = () => `
     </div>
   </section>`;
 
-export const TEMPLATES = [['editorial', 'Editorial'], ['vitrine', 'Vitrine'], ['grade', 'Grade'], ['classico', 'Clássico']];
+export const TEMPLATES = [['editorial', 'Editorial'], ['vitrine', 'Vitrine'], ['grade', 'Grade'], ['classico', 'Clássico'], ...PAPER_TEMPLATES];
 
 // Para quem cada modelo serve: aparece no seletor de modelos do visualizador.
 export const TEMPLATE_INFO = {
@@ -492,6 +493,7 @@ export const TEMPLATE_INFO = {
   vitrine: 'Loja: categorias, vantagens e produtos.',
   grade: 'Produto ou ferramenta: ideias e recursos em grade.',
   classico: 'Serviço direto: recursos, preços e chamada.',
+  ...PAPER_INFO,
 };
 
 // A identidade que cada modelo pede: escolher o modelo no visualizador aplica isto, e tudo continua editável.
@@ -500,10 +502,12 @@ export const TEMPLATE_BRANDS = {
   vitrine: { theme: 'vitrine', font: 'geometrico', mode: 'light', radius: 0 },
   grade: { theme: 'grade', font: 'condensado', mode: 'dark', radius: 2 },
   classico: { theme: 'sumi', font: 'sumi', mode: 'dark', radius: 1 },
+  ...PAPER_BRANDS,
 };
 
 // Cada modelo é uma lista de seções com nome: o nome vira o índice "Seções deste modelo".
 const SITES = {
+  ...PAPER_SITES,
   classico: [
     ['Menu', (menuId) => navbar({ menuId })],
     ['Abertura', () => hero()],

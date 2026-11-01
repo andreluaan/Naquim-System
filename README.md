@@ -18,7 +18,7 @@ npm run dev
 
 ```html
 <link rel="stylesheet" href="caminho/design-system/src/index.css">
-<html data-theme="sumi" data-font="sumi" data-radius="suave" data-mode="dark">
+<html data-theme="sumi" data-font="sumi" data-radius="reto" data-mode="dark">
 
 <!-- componentes interativos, como <ds-icon> -->
 <script type="module" src="caminho/design-system/src/index.js"></script>

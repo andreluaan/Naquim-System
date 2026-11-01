@@ -69,7 +69,7 @@ export default {
   title: 'Site completo',
   wide: true,
   keywords: 'site completo landing page exemplo modelo template editorial visualizador marca tema cores fonte cantos tela cheia',
-  lead: 'Quatro modelos de site montados só com o Sumi. Escolha um, vista-o com a sua marca e copie o tema.',
+  lead: 'Oito modelos de site montados só com o Sumi. Escolha um, vista-o com a sua marca e copie o tema.',
   render: () => `
     <div class="viz" data-viz>
       ${models()}

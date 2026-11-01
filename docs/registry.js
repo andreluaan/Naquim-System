@@ -1,4 +1,5 @@
 import apresentacao from './pages/apresentacao.js';
+import recapitulacao from './pages/recapitulacao.js';
 import inicio from './pages/inicio.js';
 import cores from './pages/cores.js';
 import paletas from './pages/paletas.js';
@@ -33,7 +34,7 @@ import roadmap from './pages/roadmap.js';
 export const groups = ['Começo', 'Fundações', 'Componentes', 'Seções de site', 'Projeto'];
 
 export const pages = [
-  apresentacao, inicio,
+  apresentacao, recapitulacao, inicio,
   cores, paletas, tipografia, espacamento, elevacao, movimento,
   botoes, icones, badges, selo, cards, formularios, carrossel, sobreposicoes,
   estrutura, navbar, hero, manifesto, recursos, listaNumerada, projetos, numeros,

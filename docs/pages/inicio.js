@@ -77,7 +77,7 @@ export default {
 <link rel="stylesheet" href="design-system/src/index.css">
 <script type="module" src="design-system/src/index.js"></script>
 
-<html data-theme="sumi" data-font="sumi" data-radius="suave" data-mode="dark">
+<html data-theme="sumi" data-font="sumi" data-radius="reto" data-mode="dark">
 
 <button class="ds-btn ds-btn--primary">Pedir orçamento</button>
 

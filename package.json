@@ -1,6 +1,6 @@
 {
   "name": "sumi-system",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "private": true,
   "type": "module",
   "description": "Sumi System, design system pessoal: tokens, temas de marca e componentes agnósticos de framework, com documentação interativa.",

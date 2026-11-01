@@ -10,7 +10,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--ds-color-bg);
+  background-color: var(--ds-color-bg);
+  background-image: var(--ds-paper-grain);
   color: var(--ds-color-text);
   font-family: var(--ds-font-body);
   font-size: var(--ds-text-md);
