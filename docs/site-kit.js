@@ -195,7 +195,7 @@ export const footer = ({ wordmark = false } = {}) => `
           </nav>`).join('')}
       </div>
       <div class="ds-footer__bottom">
-        <p>© 2026 Ateliê Sumi. Feito com o Nanquim System.</p>
+        <p>© 2026 Ateliê Sumi. Feito com o Sumi System.</p>
         <ul class="ds-footer__links"><li><a href="#">Privacidade</a></li><li><a href="#">Termos</a></li></ul>
       </div>
       ${wordmark ? '<p class="ds-footer__wordmark" aria-hidden="true">sumi.</p>' : ''}
@@ -206,7 +206,7 @@ export const heroEditorial = ({ id = 'ill-landscape-hero' } = {}) => `
   <section class="ds-section ds-hero ds-hero--editorial">
     <div class="ds-container ds-hero__inner">
       <div class="ds-hero__content">
-        <p class="ds-hero__eyebrow">Ateliê de nanquim · desde 2014</p>
+        <p class="ds-hero__eyebrow">Ateliê de sumi · desde 2014</p>
         <h1 class="ds-hero__title">sumi.</h1>
         <div class="ds-hero__meta">
           <p><strong>Identidade</strong> Marcas desenhadas à mão, uma tinta de cada vez.</p>
@@ -294,13 +294,13 @@ export const stats = ({ alt = false } = {}) => `
 // Vitrine: extraído de lojas de moda. Faixa de aviso, marca no centro, nome gigante atrás da imagem,
 // faixa invertida de categorias, vantagens com ícone e vitrine de produtos.
 const CATEGORIES = [
-  [inkDrop, 'Tintas', 'Nanquim, sépia e índigo.'],
+  [inkDrop, 'Tintas', 'Sumi, sépia e índigo.'],
   [brushStroke, 'Penas', 'Bicos de aço e pincéis.'],
   [inkWash, 'Papéis', 'Algodão de 300 g.'],
 ];
 
 const PRODUCTS = [
-  [inkDrop, 'Nanquim 30 ml', 'R$ 24,90'],
+  [inkDrop, 'Sumi 30 ml', 'R$ 24,90'],
   [brushStroke, 'Pincel nº 4', 'R$ 38,00'],
   [inkWash, 'Bloco aguada', 'R$ 42,50'],
   [() => enso({ id: 'ill-enso-produto' }), 'Kit iniciante', 'R$ 129,00'],
@@ -442,7 +442,7 @@ export const heroFramed = ({ menuId = 'sumi-menu-grade', id = 'ill-landscape-gra
           </div>
         </header>
         <div class="ds-hero__inner">
-          <p class="ds-hero__tagline">Ateliê de nanquim</p>
+          <p class="ds-hero__tagline">Ateliê de sumi</p>
           <h1 class="ds-hero__title" style="--hero-poster-size: 14cqi"><b>Tinta</b> <span>viva</span></h1>
           <div class="ds-hero__media">${inkLandscape({ id })}</div>
           <div class="ds-hero__actions"><a class="ds-btn ds-btn--primary" href="#">[ Contato ]</a></div>
@@ -496,10 +496,10 @@ export const TEMPLATE_INFO = {
 
 // A identidade que cada modelo pede: escolher o modelo no visualizador aplica isto, e tudo continua editável.
 export const TEMPLATE_BRANDS = {
-  editorial: { theme: 'nanquim', font: 'editorial', mode: 'dark', radius: 1 },
+  editorial: { theme: 'sumi', font: 'sumi', mode: 'dark', radius: 1 },
   vitrine: { theme: 'vitrine', font: 'geometrico', mode: 'light', radius: 0 },
   grade: { theme: 'grade', font: 'condensado', mode: 'dark', radius: 2 },
-  classico: { theme: 'nanquim', font: 'editorial', mode: 'dark', radius: 1 },
+  classico: { theme: 'sumi', font: 'sumi', mode: 'dark', radius: 1 },
 };
 
 // Cada modelo é uma lista de seções com nome: o nome vira o índice "Seções deste modelo".

@@ -4,7 +4,7 @@ Como o projeto mudou, versão a versão, em fotos. Cada versão tem uma **tag no
 exatamente àquele estado), e todas as capturas abaixo foram feitas do mesmo jeito: mesmas telas, mesmo tamanho,
 geradas a partir do próprio histórico com `npm run evolucao`.
 
-**Documentação ao vivo:** https://andreluaan.github.io/Nanquim-System/ · **Versão em PDF:** [Nanquim-System-Evolucao.pdf](Nanquim-System-Evolucao.pdf)
+**Documentação ao vivo:** https://andreluaan.github.io/Nanquim-System/ · **Versão em PDF:** [Sumi-System-Evolucao.pdf](Sumi-System-Evolucao.pdf)
 
 ## Linha do tempo
 
@@ -299,4 +299,4 @@ Todas as paletas no modo claro, depois do ajuste:
 2. Rode `npm run evolucao -- v0.4.0`, que gera `diario/evolucao/v0.4.0/`.
 3. Rode `npm run evolucao:faixas` para refazer as faixas da linha do tempo.
 4. Acrescente a seção da versão aqui e uma linha na tabela da linha do tempo.
-5. Gere o PDF atualizado com `npm run evolucao:pdf`, que cria `diario/Nanquim-System-Evolucao.pdf`.
+5. Gere o PDF atualizado com `npm run evolucao:pdf`, que cria `diario/Sumi-System-Evolucao.pdf`.

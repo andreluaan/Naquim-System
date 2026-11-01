@@ -34,7 +34,7 @@ const TOOLBAR = [['edit', 'Editar'], ['copy', 'Duplicar'], ['share', 'Compartilh
 
 const MENU = [['home', 'Início'], ['grid', 'Projetos'], ['pen', 'Processo'], ['user', 'Sobre'], ['mail', 'Contato']];
 
-const CART = [['Nanquim preto, 30 ml', 'R$ 24,90'], ['Pena caligráfica nº 3', 'R$ 18,00'], ['Bloco de papel 300 g', 'R$ 42,50']];
+const CART = [['Sumi preto, 30 ml', 'R$ 24,90'], ['Pena caligráfica nº 3', 'R$ 18,00'], ['Bloco de papel 300 g', 'R$ 42,50']];
 
 const TERMS = Array.from({ length: 8 }, (_, i) => `
   <h3>${i + 1}. ${['Quem somos', 'Dados que coletamos', 'Para que usamos', 'Com quem compartilhamos', 'Por quanto tempo guardamos', 'Seus direitos', 'Cookies', 'Contato'][i]}</h3>
@@ -175,7 +175,7 @@ export default {
     ${dialog({
       id: 'gaveta-menu',
       classes: 'ds-dialog--drawer ds-dialog--start',
-      title: 'Nanquim Estúdio',
+      title: 'Sumi Estúdio',
       body: `<nav class="overlay-menu" aria-label="Menu do site">
         ${MENU.map(([icon, label]) => `<a href="#sobreposicoes"><ds-icon name="${icon}"></ds-icon> ${label}</a>`).join('')}
       </nav>`,

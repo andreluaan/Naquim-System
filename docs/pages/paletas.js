@@ -26,7 +26,7 @@ export default {
   group: 'Fundações',
   title: 'Laboratório de paletas',
   keywords: 'paleta laboratório criar cor marca pigmento água aguada concentração gerar tema',
-  lead: 'Toda paleta é o nanquim com um pigmento e água. Ajuste os três e veja a sua nascer.',
+  lead: 'Toda paleta é o sumi com um pigmento e água. Ajuste os três e veja a sua nascer.',
   render: () => `
     <section class="doc-section">
       <div class="pal" data-pal>
@@ -74,7 +74,7 @@ export default {
     <section class="doc-section">
       <h2>Como a água funciona</h2>
       <ol class="card-anatomy-list">
-        <li><strong>Cinzas</strong><span>O nanquim com um toque do pigmento. Mais concentração, cinzas mais coloridos.</span></li>
+        <li><strong>Cinzas</strong><span>O sumi com um toque do pigmento. Mais concentração, cinzas mais coloridos.</span></li>
         <li><strong>Destaque</strong><span>O pigmento diluído. Mais água, mais claro.</span></li>
         <li><strong>No papel</strong><span>No modo claro, a tinta aparece com menos água, para continuar legível.</span></li>
         <li><strong>Texto do botão</strong><span>Escuro sobre destaque claro, claro sobre destaque escuro. Sozinho.</span></li>
@@ -122,7 +122,7 @@ export default {
       const mode = e.target.closest('[data-mode-option]');
       if (mode) state.mode = mode.dataset.modeOption;
       if (e.target.closest('[data-pal-copy]')) {
-        copy(`/* Paleta criada no Laboratório de paletas do Nanquim System: o nanquim com um pigmento e água. */
+        copy(`/* Paleta criada no Laboratório de paletas do Sumi System: o sumi com um pigmento e água. */
 [data-theme="minha-marca"] {
   --ds-pigment-hue: ${state.hue};
   --ds-pigment: ${state.pigment};

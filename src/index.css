@@ -1,13 +1,14 @@
 @import "./tokens/primitives.css";
 @import "./tokens/semantic.css";
 @import "./themes/aguada.css";
-@import "./themes/nanquim.css";
+@import "./themes/sumi.css";
 @import "./themes/house.css";
 @import "./themes/_marca-exemplo.css";
 @import "./base.css";
 @import "./components/button/button.css";
 @import "./components/icon/icon.css";
 @import "./components/badge/badge.css";
+@import "./components/seal/seal.css";
 @import "./components/card/card.css";
 @import "./components/form/form.css";
 @import "./components/carousel/carousel.css";

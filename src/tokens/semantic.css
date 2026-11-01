@@ -56,6 +56,10 @@
 
   --ds-color-overlay: color-mix(in oklch, var(--ds-neutral-1) 72%, transparent);
 
+  /* Vermelhão do carimbo japonês: fixo em toda marca, como a tinta do selo numa pintura. */
+  --ds-color-seal: oklch(0.5 0.17 30);
+  --ds-color-on-seal: oklch(0.97 0.012 85);
+
   --ds-shadow-sm: inset 0 1px 0 var(--ds-highlight),
     0 1px 2px hsl(var(--ds-shadow-color) / calc(var(--ds-shadow-strength) * 0.6));
   --ds-shadow-md: inset 0 1px 0 var(--ds-highlight),

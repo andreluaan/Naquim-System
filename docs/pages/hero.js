@@ -37,7 +37,7 @@ export default {
 <section class="ds-section ds-hero ds-hero--editorial">
   <div class="ds-container ds-hero__inner">
     <div class="ds-hero__content">
-      <p class="ds-hero__eyebrow">Ateliê de nanquim · desde 2014</p>
+      <p class="ds-hero__eyebrow">Ateliê de sumi · desde 2014</p>
       <h1 class="ds-hero__title">sumi.</h1>
       <div class="ds-hero__meta">
         <p><strong>Identidade</strong> Marcas desenhadas à mão.</p>
@@ -80,7 +80,7 @@ export default {
     <div class="ds-hero__frame" data-mode="light">
       <header class="ds-navbar ds-navbar--cells">…</header>
       <div class="ds-hero__inner">
-        <p class="ds-hero__tagline">Ateliê de nanquim</p>
+        <p class="ds-hero__tagline">Ateliê de sumi</p>
         <h1 class="ds-hero__title"><b>Tinta</b> <span>viva</span></h1>
         <div class="ds-hero__media"><img src="paisagem.jpg" alt=""></div>
         <p class="ds-hero__aside">Aqui o traço pode errar.</p>

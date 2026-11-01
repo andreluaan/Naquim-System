@@ -1,4 +1,4 @@
-/* Camada 3: paletas da casa, todas derivadas do nanquim pela aguada (src/themes/aguada.css).
+/* Camada 3: paletas da casa, todas derivadas do sumi pela aguada (src/themes/aguada.css).
    Cada uma é só um pigmento, uma concentração e uma quantidade de água. */
 
 /* Carvão: a tinta pura, sem pigmento. O destaque é branco no escuro e preto no papel. */
@@ -20,6 +20,14 @@
   --ds-pigment-hue: 150;
   --ds-pigment: 0.45;
   --ds-water: 0.93;
+}
+
+/* Padrão da casa: serifa mincho e gótica japonesas, que cobrem latim e kanji no mesmo traço. */
+[data-font="sumi"] {
+  --ds-font-display: "Shippori Mincho", Georgia, serif;
+  --ds-font-body: "Zen Kaku Gothic New", system-ui, sans-serif;
+  --ds-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --ds-display-transform: none;
 }
 
 [data-font="editorial"] {

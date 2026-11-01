@@ -22,7 +22,7 @@ export default {
   render: () => `
     <div class="doc-callout">
       <span aria-hidden="true">🧪</span>
-      <div>Este é o tema Nanquim. No <a href="#" data-open-lab>Laboratório</a> você troca a marca da documentação inteira.</div>
+      <div>Este é o tema Sumi. No <a href="#" data-open-lab>Laboratório</a> você troca a marca da documentação inteira.</div>
     </div>
 
     <section class="doc-section">
@@ -77,7 +77,7 @@ export default {
 <link rel="stylesheet" href="design-system/src/index.css">
 <script type="module" src="design-system/src/index.js"></script>
 
-<html data-theme="nanquim" data-font="editorial" data-radius="suave" data-mode="dark">
+<html data-theme="sumi" data-font="sumi" data-radius="suave" data-mode="dark">
 
 <button class="ds-btn ds-btn--primary">Pedir orçamento</button>
 

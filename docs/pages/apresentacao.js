@@ -4,14 +4,14 @@ const GALLERY = [
   { art: inkDrop, title: 'A gota', text: 'Fuligem e cola. Uma gota faz um traço inteiro.' },
   { art: brushStroke, title: 'O traço', text: 'Firme e sem volta: a tinta da arte-final.' },
   { art: inkWash, title: 'A aguada', text: 'Com água, uma cor vira todos os cinzas.' },
-  { art: () => enso({ id: 'ill-enso-card' }), title: 'O ensō', text: 'Um círculo, uma pincelada.' },
+  { art: () => enso({ id: 'ill-enso-card' }), title: 'O ensō', text: 'O círculo zen, feito em uma pincelada. É a nossa marca.' },
 ];
 
 const PRINCIPLES = [
-  { name: 'Precisão', ink: 'Linha fina, sem borrão.', system: 'Tudo em escala: espaços de 4 em 4px.' },
-  { name: 'Contraste', ink: 'Preto no papel se lê de longe.', system: 'Todo texto passa de 4.5:1, em toda paleta.' },
-  { name: 'Aguada', ink: 'Uma tinta, muitos tons.', system: 'Uma cor vira 12 tons equilibrados.' },
-  { name: 'Permanência', ink: 'Seco, não sai mais.', system: 'Cada peça é feita uma vez e reaproveitada.' },
+  { name: 'Kanso', ink: 'Só o traço necessário.', system: 'Cada peça faz uma coisa, sem enfeite.' },
+  { name: 'Ma', ink: 'O vazio também pinta.', system: 'Tudo em escala: espaços de 4 em 4px.' },
+  { name: 'Nōtan', ink: 'Claro e escuro em equilíbrio.', system: 'Todo texto passa de 4.5:1, em toda paleta.' },
+  { name: 'Shibui', ink: 'Beleza discreta, que não grita.', system: 'Sem brilho: profundidade vem de camadas.' },
 ];
 
 const STEP_NAMES = {
@@ -21,7 +21,7 @@ const STEP_NAMES = {
 
 function modePreview(mode, label, description) {
   return `
-    <div class="pres-mode" data-theme="nanquim" data-mode="${mode}">
+    <div class="pres-mode" data-theme="sumi" data-mode="${mode}">
       <p class="pres-mode-label">${label}</p>
       <h3>Arte-final em uma pincelada</h3>
       <p>${description}</p>
@@ -35,21 +35,23 @@ function modePreview(mode, label, description) {
 export default {
   id: 'apresentacao',
   group: 'Começo',
-  title: 'Nanquim',
+  title: 'Sumi',
   keywords: 'conceito marca identidade tinta apresentação sobre',
   lead: 'A tinta com que desenho meus sites: escura, precisa e sóbria.',
   render: () => `
     <div class="pres-hero">
       <div class="pres-hero-art">${enso({ id: 'ill-enso-hero', color: 'currentColor', withPaper: false, animated: true })}</div>
       <div class="pres-hero-text">
-        <p class="doc-eyebrow">Nanquim System · v0.13</p>
+        <span class="ds-seal" lang="ja" role="img" aria-label="Selo: sumi">墨</span>
+        <p class="doc-eyebrow">Sumi System · v0.15</p>
         <p class="pres-quote">"Desenhar uma vez, usar em tudo."</p>
       </div>
     </div>
 
     <section class="doc-section">
-      <h2>O que é nanquim</h2>
-      <p>A tinta preta de calígrafos e quadrinistas. O nome vem de Nanjing, na China, de onde ela chegava aos portugueses.</p>
+      <h2>O que é sumi</h2>
+      <p>A tinta preta da caligrafia e da pintura japonesas, o sumi-e.</p>
+      <p>Em português ela se chama nanquim, nome que vem da cidade chinesa.</p>
       <div class="pres-gallery">
         ${GALLERY.map((item) => `
           <figure class="pres-figure">
@@ -61,7 +63,7 @@ export default {
 
     <section class="doc-section">
       <h2>Por que esse nome</h2>
-      <p>Cada qualidade da tinta virou uma regra.</p>
+      <p>Quatro ideias da estética japonesa viraram regras.</p>
       <div class="pres-principles">
         ${PRINCIPLES.map((p, i) => `
           <article class="pres-principle">

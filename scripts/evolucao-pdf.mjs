@@ -1,4 +1,4 @@
-// Uso: npm run evolucao:pdf   → diario/Nanquim-System-Evolucao.pdf
+// Uso: npm run evolucao:pdf   → diario/Sumi-System-Evolucao.pdf
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -17,7 +17,7 @@ if (!browser) throw new Error('Nenhum Chrome/Edge encontrado. Defina BROWSER_PAT
 
 const source = resolve('diario', 'EVOLUCAO.md');
 const htmlFile = resolve('diario', '.evolucao-print.html');
-const pdfFile = resolve('diario', 'Nanquim-System-Evolucao.pdf');
+const pdfFile = resolve('diario', 'Sumi-System-Evolucao.pdf');
 
 const { version } = JSON.parse(readFileSync('package.json', 'utf8'));
 const today = new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
@@ -30,7 +30,7 @@ const html = `<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Nanquim System — Evolução do projeto</title>
+<title>Sumi System — Evolução do projeto</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
   @page {
@@ -188,7 +188,7 @@ const html = `<!doctype html>
   <section class="cover">
     <svg class="cover-mark" viewBox="0 0 24 24"><path d="M12 2.5S6.5 10.2 6.5 14.2a5.5 5.5 0 0 0 11 0C17.5 10.2 12 2.5 12 2.5Z" /></svg>
     <div>
-      <h1>Nanquim System</h1>
+      <h1>Sumi System</h1>
       <p class="cover-subtitle">Evolução do projeto, versão a versão</p>
     </div>
     <div class="cover-meta">Versão atual ${version} · gerado em ${today} · andreluaan.github.io/Nanquim-System</div>

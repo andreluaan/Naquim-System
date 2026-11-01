@@ -1,9 +1,9 @@
 {
-  "name": "nanquim-system",
-  "version": "0.14.0",
+  "name": "sumi-system",
+  "version": "0.15.0",
   "private": true,
   "type": "module",
-  "description": "Nanquim System, design system pessoal: tokens, temas de marca e componentes agnósticos de framework, com documentação interativa.",
+  "description": "Sumi System, design system pessoal: tokens, temas de marca e componentes agnósticos de framework, com documentação interativa.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

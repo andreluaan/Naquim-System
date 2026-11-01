@@ -9,6 +9,7 @@ import movimento from './pages/movimento.js';
 import botoes from './pages/botoes.js';
 import icones from './pages/icones.js';
 import badges from './pages/badges.js';
+import selo from './pages/selo.js';
 import cards from './pages/cards.js';
 import formularios from './pages/formularios.js';
 import carrossel from './pages/carrossel.js';
@@ -34,7 +35,7 @@ export const groups = ['Começo', 'Fundações', 'Componentes', 'Seções de sit
 export const pages = [
   apresentacao, inicio,
   cores, paletas, tipografia, espacamento, elevacao, movimento,
-  botoes, icones, badges, cards, formularios, carrossel, sobreposicoes,
+  botoes, icones, badges, selo, cards, formularios, carrossel, sobreposicoes,
   estrutura, navbar, hero, manifesto, recursos, listaNumerada, projetos, numeros,
   precos, depoimentos, perguntas, chamada, rodape, siteCompleto,
   roadmap,

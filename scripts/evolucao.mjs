@@ -87,7 +87,7 @@ const versions = process.argv.slice(2).length
   ? process.argv.slice(2)
   : git('tag', '--list', 'v*', '--sort=version:refname').split('\n').filter(Boolean);
 
-const workRoot = join(tmpdir(), 'nanquim-evolucao');
+const workRoot = join(tmpdir(), 'sumi-evolucao');
 let port = 5300;
 
 for (const version of versions) {

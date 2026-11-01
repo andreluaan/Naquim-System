@@ -26,6 +26,7 @@ const SHOTS = [
   ['00-apresentacao', 'apresentacao', {}, DESKTOP],
   ['01-inicio', 'inicio', {}, DESKTOP],
   ['02-cores', 'cores', {}, DESKTOP],
+  ['02b-selo', 'selo', {}, DESKTOP],
   ['03-tipografia', 'tipografia', {}, DESKTOP],
   ['04-espaco-cantos', 'espacamento', {}, DESKTOP],
   ['05-elevacao', 'elevacao', {}, DESKTOP],

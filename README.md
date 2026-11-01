@@ -1,4 +1,6 @@
-# Nanquim System
+# Sumi System
+
+Sumi (墨) é a tinta da pintura japonesa; o projeto se chamava Nanquim até a v0.14.
 
 Minha caixa de peças de front-end: tokens (cores, tipografia, espaço, cantos, elevação, movimento),
 temas de marca trocáveis e, aos poucos, componentes. Funciona em qualquer stack (CSS puro + Web Components).
@@ -16,7 +18,7 @@ npm run dev
 
 ```html
 <link rel="stylesheet" href="caminho/design-system/src/index.css">
-<html data-theme="nanquim" data-font="editorial" data-radius="suave" data-mode="dark">
+<html data-theme="sumi" data-font="sumi" data-radius="suave" data-mode="dark">
 
 <!-- componentes interativos, como <ds-icon> -->
 <script type="module" src="caminho/design-system/src/index.js"></script>

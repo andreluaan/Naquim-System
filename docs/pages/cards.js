@@ -9,7 +9,7 @@ const VARIANTS = [
 ];
 
 const PRODUCTS = [
-  [inkDrop, 'Nanquim 30 ml', 'R$ 24,90'],
+  [inkDrop, 'Sumi 30 ml', 'R$ 24,90'],
   [brushStroke, 'Pincel nº 4', 'R$ 38,00'],
   [inkWash, 'Bloco aguada', 'R$ 42,50'],
   [() => enso({ id: 'ill-enso-card-produto' }), 'Kit de iniciação', 'R$ 129,00'],
@@ -77,7 +77,7 @@ export default {
           <div class="ds-card__content">
             <p class="ds-card__eyebrow">Ilustração <span class="card-marker">2</span></p>
             <h3 class="ds-card__title">O traço que não volta atrás <span class="card-marker">3</span></h3>
-            <p class="ds-card__body">Por que a arte-final em nanquim exige decisões firmes. <span class="card-marker">4</span></p>
+            <p class="ds-card__body">Por que a arte-final em sumi exige decisões firmes. <span class="card-marker">4</span></p>
           </div>
           <div class="ds-card__footer">
             <button class="ds-btn ds-btn--secondary ds-btn--sm">Ler artigo</button>
@@ -143,7 +143,7 @@ export default {
           <div class="ds-card__media">${inkDrop()}<span class="ds-badge ds-badge--success ds-badge--pill">Em estoque</span></div>
           <div class="ds-card__content">
             <p class="ds-card__eyebrow">Papelaria</p>
-            <h3 class="ds-card__title">Nanquim preto, 30 ml</h3>
+            <h3 class="ds-card__title">Sumi preto, 30 ml</h3>
             <p class="ds-card__body">Pigmento de carbono, à prova d'água depois de seco.</p>
           </div>
           <div class="ds-card__footer card-price">
@@ -233,12 +233,12 @@ export default {
       ${code(`
 <article class="ds-card ds-card--plain">
   <div class="ds-card__media">
-    <img src="nanquim.jpg" alt="Frasco de nanquim de 30 ml">
+    <img src="sumi.jpg" alt="Frasco de sumi de 30 ml">
     <button class="ds-btn ds-btn--secondary ds-btn--icon ds-btn--sm ds-card__corner"
-      aria-label="Favoritar Nanquim 30 ml"><ds-icon name="heart"></ds-icon></button>
+      aria-label="Favoritar Sumi 30 ml"><ds-icon name="heart"></ds-icon></button>
   </div>
   <div class="ds-card__content">
-    <h3 class="ds-card__title">Nanquim 30 ml</h3>
+    <h3 class="ds-card__title">Sumi 30 ml</h3>
     <p class="ds-card__price">R$ 24,90</p>
   </div>
 </article>`, 'html')}

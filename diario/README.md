@@ -1,6 +1,6 @@
 # Diário do projeto
 
-Registro da evolução do Nanquim System: o que foi feito, **por quê**, que decisões foram tomadas
+Registro da evolução do Sumi System (Nanquim até a v0.14): o que foi feito, **por quê**, que decisões foram tomadas
 e como estava visualmente em cada etapa. Serve como memória do projeto e como matéria-prima
 para posts (LinkedIn, portfólio).
 
@@ -37,3 +37,4 @@ para posts (LinkedIn, portfólio).
 | 015 | 2026-10-23 | [Aguada, laboratório de paletas, Vitrine e Grade](015-aguada-vitrine-grade.md) | Paletas derivadas do nanquim por pigmento e água, laboratório de paletas e dois modelos extraídos de referências |
 | 016 | 2026-10-23 | [Vitrine padrão e painel em grade](016-painel-vitrine.md) | Vitrine como modelo padrão, painel sem elemento solto e fontes escritas na própria letra |
 | 017 | 2026-10-28 | [Site completo organizado por modelo](017-site-completo-modelos.md) | Modelos em cartões, índice de seções preso no topo e acessibilidade em 100 |
+| 018 | 2026-11-01 | [De Nanquim a Sumi](018-sumi.md) | Novo nome, estética japonesa, logo ensō e selo vermelho |

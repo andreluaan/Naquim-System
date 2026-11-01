@@ -13,8 +13,8 @@ function fieldHtml({ state, size }) {
     'aria-describedby="email-ajuda email-erro"',
   ];
   if (state === 'error') attrs.push('aria-invalid="true"', 'value="andre@"');
-  if (state === 'disabled') attrs.push('disabled', 'value="andre@nanquim.com"');
-  if (state === 'readonly') attrs.push('readonly', 'value="andre@nanquim.com"');
+  if (state === 'disabled') attrs.push('disabled', 'value="andre@sumi.com"');
+  if (state === 'readonly') attrs.push('readonly', 'value="andre@sumi.com"');
 
   return `<div class="ds-field">
   <label class="ds-field__label" for="email">E-mail<span class="ds-field__required" aria-hidden="true">*</span></label>

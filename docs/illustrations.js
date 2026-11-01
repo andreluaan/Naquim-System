@@ -20,7 +20,7 @@ const paper = (id) => `
 export function inkDrop() {
   const id = 'ill-drop';
   return `
-    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Gota de nanquim sobre papel">
+    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Gota de sumi sobre papel">
       <defs>${roughEdge(id, 10)}${paperGrain(id)}</defs>
       ${paper(id)}
       <g fill="${INK}" filter="url(#${id}-rough)">
@@ -37,7 +37,7 @@ export function inkDrop() {
 export function brushStroke() {
   const id = 'ill-brush';
   return `
-    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Pincelada de nanquim">
+    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Pincelada de sumi">
       <defs>${roughEdge(id, 7, '0.015 0.2')}${paperGrain(id)}</defs>
       ${paper(id)}
       <g fill="none" stroke="${INK}" stroke-linecap="round" filter="url(#${id}-rough)">
@@ -78,7 +78,7 @@ export function enso({ id = 'ill-enso', color = INK, withPaper = true, animated 
 // na base, como névoa, com o sol na cor de destaque. A mesma imagem serve a qualquer marca e aos dois modos.
 export function inkLandscape({ id = 'ill-landscape' } = {}) {
   return `
-    <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Montanhas pintadas em nanquim, com névoa e sol">
+    <svg viewBox="0 0 400 480" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Montanhas pintadas em sumi, com névoa e sol">
       <defs>
         ${roughEdge(id, 8, '0.03')}
         <linearGradient id="${id}-fade" x1="0" y1="0" x2="0" y2="1">

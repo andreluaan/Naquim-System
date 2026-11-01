@@ -91,7 +91,7 @@ def copy_evolution():
             source = version / f'{shot}.png'
             if source.exists():
                 shutil.copy2(source, ATTACHMENTS_DIR / f'nanquim-{version.name}-{label}.png')
-    pdf = DIARY / 'Nanquim-System-Evolucao.pdf'
+    pdf = DIARY / 'Sumi-System-Evolucao.pdf'
     if pdf.exists():
         shutil.copy2(pdf, ATTACHMENTS_DIR / pdf.name)
 

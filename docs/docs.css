@@ -56,7 +56,10 @@ body { transition: background-color var(--ds-duration-base) var(--ds-ease-out); 
 .doc-brand-mark {
   width: 22px;
   height: 22px;
-  fill: var(--ds-color-text);
+  fill: none;
+  stroke: var(--ds-color-text);
+  stroke-width: 3;
+  stroke-linecap: round;
 }
 
 .doc-search input {

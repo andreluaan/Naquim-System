@@ -37,8 +37,8 @@ const KEYWORDS = {
   star: 'estrela avaliação favorito',
   image: 'foto imagem galeria',
   cart: 'carrinho compra loja',
-  ink: 'gota tinta nanquim marca',
-  pen: 'pena caneta nanquim marca',
+  ink: 'gota tinta sumi marca',
+  pen: 'pena caneta sumi marca',
 };
 
 const dsIconTag = (name, size, weight) =>
@@ -142,7 +142,7 @@ export default {
         <button class="ds-btn ds-btn--secondary"><ds-icon name="download"></ds-icon> Baixar PDF</button>
         <button class="ds-btn ds-btn--ghost">Ver mais <ds-icon name="arrow-right"></ds-icon></button>
         <button class="ds-btn ds-btn--outline ds-btn--icon" aria-label="Buscar"><ds-icon name="search"></ds-icon></button>
-        <span class="icon-inline"><ds-icon name="map-pin" label="Endereço"></ds-icon> Rua do Nanquim, 24</span>
+        <span class="icon-inline"><ds-icon name="map-pin" label="Endereço"></ds-icon> Rua do Sumi, 24</span>
       </div>
       ${doDont(
         ['Ícone com texto', '<code>label</code> quando ele fala sozinho'],
@@ -150,7 +150,7 @@ export default {
       )}
       ${code(`
 <!-- 1. uma vez por página -->
-<script type="module" src="nanquim/src/index.js"></script>
+<script type="module" src="sumi/src/index.js"></script>
 
 <!-- 2. use em qualquer lugar -->
 <ds-icon name="heart"></ds-icon>

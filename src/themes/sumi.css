@@ -2,7 +2,7 @@
    Com @scope, um trecho com data-mode próprio (uma faixa invertida) também troca de lado, e o tema para
    onde começa outro data-theme. */
 
-@scope (:root:not([data-theme]), [data-theme="nanquim"]) to ([data-theme]) {
+@scope (:root:not([data-theme]), [data-theme="sumi"]) to ([data-theme]) {
   :scope,
   [data-mode="dark"] {
     --ds-neutral-hue: 265;

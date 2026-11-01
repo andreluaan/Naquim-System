@@ -11,7 +11,7 @@ export const OPTIONS = {
     label: 'Paleta',
     hint: 'O humor das cores.',
     items: [
-      { id: 'nanquim', name: 'Nanquim', desc: 'A tinta-mãe · padrão', swatch: ['oklch(0.175 0.014 265)', 'oklch(0.3 0.014 265)', 'oklch(0.9 0.035 85)'] },
+      { id: 'sumi', name: 'Sumi', desc: 'A tinta-mãe · padrão', swatch: ['oklch(0.175 0.014 265)', 'oklch(0.3 0.014 265)', 'oklch(0.9 0.035 85)'] },
       { id: 'neutro', name: 'Carvão', desc: 'Tinta pura, sem pigmento', aguada: [0, 0, 0.92] },
       { id: 'vitrine', name: 'Vitrine', desc: 'Carvão em papel quente', aguada: [80, 0.15, 0.93] },
       { id: 'grade', name: 'Verde-água', desc: 'Pouco verde, muita água', aguada: [150, 0.45, 0.93] },
@@ -22,6 +22,7 @@ export const OPTIONS = {
     label: 'Tipografia',
     hint: 'A voz do texto.',
     items: [
+      { id: 'sumi', name: 'Sumi', desc: 'Shippori Mincho + Zen Kaku · padrão', family: "'Shippori Mincho', serif" },
       { id: 'editorial', name: 'Editorial', desc: 'Fraunces + Inter', family: "'Fraunces', serif" },
       { id: 'moderno', name: 'Moderno', desc: 'Geist', family: "'Geist', sans-serif" },
       { id: 'classico', name: 'Clássico', desc: 'Instrument Serif + DM Sans', family: "'Instrument Serif', serif" },
@@ -51,7 +52,7 @@ export const OPTIONS = {
 
 OPTIONS.theme.items.forEach((item) => { item.swatch ??= aguadaSwatch(item.aguada); });
 
-const STORAGE_KEY = 'nanquim-lab-v2';
+const STORAGE_KEY = 'sumi-lab-v1';
 const root = document.documentElement;
 const listeners = new Set();
 

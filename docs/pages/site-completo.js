@@ -69,7 +69,7 @@ export default {
   title: 'Site completo',
   wide: true,
   keywords: 'site completo landing page exemplo modelo template editorial visualizador marca tema cores fonte cantos tela cheia',
-  lead: 'Quatro modelos de site montados só com o Nanquim. Escolha um, vista-o com a sua marca e copie o tema.',
+  lead: 'Quatro modelos de site montados só com o Sumi. Escolha um, vista-o com a sua marca e copie o tema.',
   render: () => `
     <div class="viz" data-viz>
       ${models()}
@@ -224,7 +224,7 @@ export default {
 
     function themeCss() {
       const value = (key) => Number(readVar(SLIDERS[key].variable, SLIDERS[key].fallback).toFixed(3));
-      return `/* Marca gerada no visualizador do Nanquim System: o nanquim com um pigmento e água.
+      return `/* Marca gerada no visualizador do Sumi System: o sumi com um pigmento e água.
    Salve como src/themes/minha-marca.css, importe em src/index.css e use:
    <html data-theme="minha-marca" data-font="${state.font}" data-mode="${state.mode}"> */
 [data-theme="minha-marca"] {

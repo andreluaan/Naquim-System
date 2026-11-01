@@ -1,10 +1,10 @@
-/* Aguada: toda paleta é o nanquim com um pigmento e água, como na arte-final.
+/* Aguada: toda paleta é o sumi com um pigmento e água, como na arte-final.
    O tema define só três números e o resto sai daqui:
    --ds-pigment-hue  o tom do pigmento (0 a 360)
    --ds-pigment      quanto pigmento entra na tinta (0 = carvão puro, 1 = cor intensa)
    --ds-water        quanto o destaque é diluído (mais água, mais claro)
    No papel (modo claro), a tinta aparece com menos água. Recalculado em cada [data-mode], então trechos
-   invertidos continuam certos. O tema Nanquim, a tinta-mãe, define os valores à mão e tem prioridade. */
+   invertidos continuam certos. O tema Sumi, a tinta-mãe, define os valores à mão e tem prioridade. */
 
 :root,
 [data-mode],

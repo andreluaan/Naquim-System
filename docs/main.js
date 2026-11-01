@@ -57,7 +57,7 @@ function render() {
       ${page.render()}
     </article>`;
   cleanup = page.mount?.(content) ?? null;
-  document.title = `${page.title} — Nanquim System`;
+  document.title = `${page.title} — Sumi System`;
   highlightNav();
   sidebar.classList.remove('is-open');
   content.scrollTo?.(0, 0);

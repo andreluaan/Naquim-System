@@ -1,0 +1,25 @@
+.ds-seal {
+  display: inline-grid;
+  place-items: center;
+  width: var(--ds-space-10);
+  height: var(--ds-space-10);
+  border-radius: var(--ds-radius-xs);
+  background: var(--ds-color-seal);
+  color: var(--ds-color-on-seal);
+  font-family: var(--ds-font-display);
+  font-size: var(--ds-text-xl);
+  font-weight: var(--ds-weight-bold);
+  line-height: 1;
+}
+
+.ds-seal--sm {
+  width: var(--ds-space-6);
+  height: var(--ds-space-6);
+  font-size: var(--ds-text-sm);
+}
+
+.ds-seal--lg {
+  width: var(--ds-space-16);
+  height: var(--ds-space-16);
+  font-size: var(--ds-text-3xl);
+}
