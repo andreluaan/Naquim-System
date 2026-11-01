@@ -30,6 +30,7 @@ geradas a partir do próprio histórico com `npm run evolucao`.
 | [v0.14.0](#v0140--site-completo-organizado-por-modelo) | 2026-10-28 | Site completo organizado por modelo | 30 | 22 | Nanquim + 3 da aguada + marca de exemplo + cor livre |
 | [v0.15.0](#v0150--de-nanquim-a-sumi) | 2026-11-01 | De Nanquim a Sumi | 31 | 23 | Sumi + 3 da aguada + marca de exemplo + cor livre |
 | [v0.16.0](#v0160--mundo-de-papel) | 2026-11-01 | Mundo de papel | 32 | 24 | Sumi + 3 da aguada + marca de exemplo + cor livre |
+| [v0.17.0](#v0170--preto-e-branco) | 2026-11-01 | Preto e branco | 32 | 24 | Sumi + 3 da aguada + marca de exemplo + cor livre |
 
 ### A mesma tela em cada versão
 
@@ -323,6 +324,20 @@ Todas as paletas no modo claro, depois do ajuste:
 | Antes (v0.15.0) | Depois (v0.16.0) |
 |---|---|
 | ![](evolucao/v0.15.0/03i-site-completo.png) | ![](evolucao/v0.16.0/03i-site-completo.png) |
+
+---
+
+## v0.17.0 — Preto e branco
+
+*2026-11-01 · tag `v0.17.0` · diário: [020](020-preto-e-branco.md)*
+
+- Tema Sumi sem croma
+- Cenários em pintura sumi-e, com referências do Pinterest
+- Kanji vertical e selo pequeno nas aberturas
+
+| Antes (v0.16.0) | Depois (v0.17.0) |
+|---|---|
+| ![](evolucao/v0.16.0/03i-site-completo.png) | ![](evolucao/v0.17.0/03i-site-completo.png) |
 
 ---
 
