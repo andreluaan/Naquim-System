@@ -51,12 +51,6 @@ const diorama = (scene, sun = [590, 150, 62], variant = '') => {
   </div>`;
 };
 
-const mark = (kanji) => `
-  <div class="ds-paper-hero__mark">
-    <span class="ds-paper-hero__kanji" lang="ja" aria-hidden="true">${kanji}</span>
-    <span class="ds-seal ds-seal--sm" lang="ja" aria-hidden="true">墨</span>
-  </div>`;
-
 const nav = (brand, links, action) => `
   <header class="ds-sheet--raised">
     <nav class="ds-container ds-paper-nav" aria-label="${brand}">
@@ -136,15 +130,15 @@ export const PAPER_SITES = {
   editora: [
     ['Menu', () => nav('Dobra Edições', ['Catálogo', 'Autores', 'Livraria'], 'Ver catálogo')],
     ['Abertura', () => `
-      <section class="ds-paper-hero ds-paper-hero--center">
-        <div class="ds-container ds-paper-hero__layout">
-          <div class="ds-paper-hero__copy">
-            ${mark('紙')}
+      <section class="ds-paper-hero">
+        <div class="ds-container ds-hero-rail">
+          <span class="ds-hero-rail__kanji" lang="ja" aria-hidden="true">紙</span>
+          <div>
             <h1 class="ds-paper-hero__title">Livros feitos à mão</h1>
             <p class="ds-paper-hero__text">Tiragens curtas, costuradas uma a uma.</p>
             <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Ver catálogo</a>
           </div>
-          ${diorama('montanhas')}
+          <p class="ds-hero-rail__side">Dobra Edições, casa de livros costurados</p>
         </div>
       </section>`],
     ['Catálogo', () => ledger('Neste ano', [
@@ -161,14 +155,18 @@ export const PAPER_SITES = {
   festival: [
     ['Menu', () => nav('Kamishibai', ['Programa', 'Lugares'], 'Garantir lugar')],
     ['Abertura', () => `
-      <section class="ds-paper-hero ds-paper-hero--stage">
-        <div class="ds-container ds-paper-hero__layout">
-          ${diorama('ondas', [248, 130, 58], 'ds-diorama--strips')}
-          <div>
-            ${mark('劇')}
-            <h1 class="ds-paper-hero__title">Teatro de papel</h1>
-            <p class="ds-paper-hero__text">Três noites de histórias contadas em folhas.</p>
-            <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Garantir lugar</a>
+      <section class="ds-paper-hero">
+        <div class="ds-container ds-hero-poster">
+          <h1 class="ds-hero-poster__word">Kamishibai</h1>
+          <div class="ds-hero-poster__grid">
+            <div>${diorama('ondas', [248, 130, 58], 'ds-diorama--strips')}</div>
+            <div>
+              <span class="ds-paper-hero__kanji" lang="ja" aria-hidden="true">紙芝居</span>
+            </div>
+            <div>
+              <p class="ds-paper-hero__text">Três noites de teatro de papel.</p>
+              <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Garantir lugar</a>
+            </div>
           </div>
         </div>
       </section>`],
@@ -185,15 +183,18 @@ export const PAPER_SITES = {
   'casa-de-cha': [
     ['Menu', () => nav('Casa Shoji', ['Cardápio', 'Horários'], 'Reservar')],
     ['Abertura', () => `
-      <section class="ds-paper-hero ds-paper-hero--scroll">
-        <div class="ds-container ds-paper-hero__layout">
-          <span class="ds-paper-hero__kanji" lang="ja" aria-hidden="true">茶</span>
+      <section class="ds-paper-hero ds-hero-diagonal">
+        <div class="ds-hero-diagonal__night" data-mode="dark"></div>
+        <div class="ds-container ds-hero-diagonal__layout">
           <div>
             <h1 class="ds-paper-hero__title">Sente. O chá espera.</h1>
             <p class="ds-paper-hero__text">Chás japoneses servidos sem pressa.</p>
             <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Reservar mesa</a>
           </div>
-          ${diorama('tigela', [640, 130, 50])}
+          <div class="ds-hero-diagonal__art" data-mode="dark">
+            <span class="ds-paper-hero__kanji" lang="ja" aria-hidden="true">茶</span>
+            ${diorama('tigela', [640, 130, 50])}
+          </div>
         </div>
       </section>`],
     ['Cardápio', () => ledger('Cardápio', [
@@ -205,18 +206,18 @@ export const PAPER_SITES = {
   revista: [
     ['Menu', () => nav('Vinco', ['Edições', 'Sobre'], 'Assinar')],
     ['Abertura', () => `
-      <section class="ds-paper-hero ds-paper-hero--split">
-        <div class="ds-container ds-paper-hero__layout">
-          <div>
-            ${mark('静')}
-            <h1 class="ds-paper-hero__title">Vinco</h1>
-            <p class="ds-paper-hero__text">Uma revista impressa sobre coisas feitas devagar.</p>
-            <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Assinar</a>
-          </div>
-          <div class="ds-stack">
-            <article class="ds-stack__sheet ds-stack__sheet--ink"><h2 class="ds-stack__title">Edição Papel</h2><p>Quem ainda faz à mão.</p></article>
-            <article class="ds-stack__sheet"><h2 class="ds-stack__title">Edição Tinta</h2><p>A cor antes da cor.</p></article>
-          </div>
+      <section class="ds-hero-panels">
+        <div class="ds-hero-panels__grid">
+        <div class="ds-hero-panels__dark" data-mode="dark">
+          <span class="ds-seal" lang="ja" role="img" aria-label="Selo: sumi">墨</span>
+          <h1 class="ds-paper-hero__title">Vinco</h1>
+          <span class="ds-paper-hero__kanji" lang="ja" aria-hidden="true">静</span>
+        </div>
+        <div class="ds-hero-panels__light">
+          ${diorama('montanhas', [590, 130, 50])}
+          <p class="ds-paper-hero__text">Uma revista impressa sobre coisas feitas devagar.</p>
+          <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Assinar</a>
+        </div>
         </div>
       </section>`],
     ['Nesta edição', () => ledger('Nesta edição', [

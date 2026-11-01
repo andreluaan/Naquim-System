@@ -40,3 +40,4 @@ para posts (LinkedIn, portfólio).
 | 018 | 2026-11-01 | [De Nanquim a Sumi](018-sumi.md) | Novo nome, estética japonesa, logo ensō e selo vermelho |
 | 019 | 2026-11-01 | [Mundo de papel](019-mundo-de-papel.md) | Selo preto e branco, matéria de papel, recapitulação e quatro sites novos |
 | 020 | 2026-11-01 | [Preto e branco](020-preto-e-branco.md) | Tema sem croma e cenários em pintura sumi-e, com referências do Pinterest |
+| 021 | 2026-11-01 | [Aberturas de web design japonês](021-web-japones.md) | Quatro aberturas novas com referências de sites |
