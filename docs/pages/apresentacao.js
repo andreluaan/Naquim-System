@@ -81,8 +81,8 @@ export default {
       <h2>Tinta e papel</h2>
       <p>No escuro, a tela é tinta e o destaque é papel. No claro, o inverso.</p>
       <div class="pres-modes">
-        ${modePreview('dark', 'Escuro · tinta', 'Preto-azulado com destaque marfim.')}
-        ${modePreview('light', 'Claro · papel', 'Marfim quente com destaque em tinta.')}
+        ${modePreview('dark', 'Escuro · tinta', 'Folha preta com traço branco.')}
+        ${modePreview('light', 'Claro · papel', 'Folha branca com traço preto.')}
       </div>
     </section>
 

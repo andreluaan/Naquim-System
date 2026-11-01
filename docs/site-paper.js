@@ -23,12 +23,38 @@ const SCENES = {
   ],
 };
 
-const diorama = (scene, sun = [590, 150, 62]) => `
-  <div class="ds-diorama">
-    <svg viewBox="0 0 800 600" role="img" aria-label="Paisagem de papel recortado em camadas">
+const SPLASHES = [[120, 90, 7], [150, 128, 3], [92, 142, 4], [690, 400, 5], [720, 360, 2.5], [430, 70, 3]];
+
+// Pintura sumi-e: as bordas tremem como pincel e a base se dissolve em névoa.
+const diorama = (scene, sun = [590, 150, 62], variant = '') => {
+  const id = `ink-${scene}-${sun[0]}`;
+  return `
+  <div class="ds-diorama ${variant}">
+    <svg viewBox="0 0 800 600" role="img" aria-label="Pintura em tinta preta sobre papel, com névoa">
+      <defs>
+        <filter id="${id}-brush" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.018 0.09" numOctaves="4" seed="7" />
+          <feDisplacementMap in="SourceGraphic" scale="26" />
+        </filter>
+        <linearGradient id="${id}-fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0.45" stop-color="white" />
+          <stop offset="1" stop-color="white" stop-opacity="0.15" />
+        </linearGradient>
+        <mask id="${id}-mist"><rect width="800" height="600" fill="url(#${id}-fade)" /></mask>
+      </defs>
       <circle class="ds-diorama__sun" cx="${sun[0]}" cy="${sun[1]}" r="${sun[2]}" />
-      ${SCENES[scene].map((d) => `<path class="ds-diorama__layer" d="${d}" />`).join('')}
+      <g mask="url(#${id}-mist)" filter="url(#${id}-brush)">
+        ${SCENES[scene].map((d) => `<path class="ds-diorama__layer" d="${d}" />`).join('')}
+      </g>
+      ${SPLASHES.map(([x, y, r]) => `<circle class="ds-diorama__splash" cx="${x}" cy="${y}" r="${r}" />`).join('')}
     </svg>
+  </div>`;
+};
+
+const mark = (kanji) => `
+  <div class="ds-paper-hero__mark">
+    <span class="ds-paper-hero__kanji" lang="ja" aria-hidden="true">${kanji}</span>
+    <span class="ds-seal ds-seal--sm" lang="ja" aria-hidden="true">墨</span>
   </div>`;
 
 const nav = (brand, links, action) => `
@@ -101,9 +127,9 @@ export const PAPER_INFO = {
 
 export const PAPER_BRANDS = {
   editora: { theme: 'sumi', font: 'sumi', mode: 'light', radius: 0 },
-  festival: { theme: 'neutro', font: 'condensado', mode: 'dark', radius: 0 },
-  'casa-de-cha': { theme: 'grade', font: 'classico', mode: 'light', radius: 0 },
-  revista: { theme: 'vitrine', font: 'sumi', mode: 'light', radius: 0 },
+  festival: { theme: 'sumi', font: 'condensado', mode: 'dark', radius: 0 },
+  'casa-de-cha': { theme: 'sumi', font: 'classico', mode: 'light', radius: 0 },
+  revista: { theme: 'sumi', font: 'sumi', mode: 'light', radius: 0 },
 };
 
 export const PAPER_SITES = {
@@ -113,6 +139,7 @@ export const PAPER_SITES = {
       <section class="ds-paper-hero ds-paper-hero--center">
         <div class="ds-container ds-paper-hero__layout">
           <div class="ds-paper-hero__copy">
+            ${mark('紙')}
             <h1 class="ds-paper-hero__title">Livros feitos à mão</h1>
             <p class="ds-paper-hero__text">Tiragens curtas, costuradas uma a uma.</p>
             <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Ver catálogo</a>
@@ -136,8 +163,9 @@ export const PAPER_SITES = {
     ['Abertura', () => `
       <section class="ds-paper-hero ds-paper-hero--stage">
         <div class="ds-container ds-paper-hero__layout">
-          ${diorama('ondas', [160, 150, 80])}
+          ${diorama('ondas', [248, 130, 58], 'ds-diorama--strips')}
           <div>
+            ${mark('劇')}
             <h1 class="ds-paper-hero__title">Teatro de papel</h1>
             <p class="ds-paper-hero__text">Três noites de histórias contadas em folhas.</p>
             <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Garantir lugar</a>
@@ -180,6 +208,7 @@ export const PAPER_SITES = {
       <section class="ds-paper-hero ds-paper-hero--split">
         <div class="ds-container ds-paper-hero__layout">
           <div>
+            ${mark('静')}
             <h1 class="ds-paper-hero__title">Vinco</h1>
             <p class="ds-paper-hero__text">Uma revista impressa sobre coisas feitas devagar.</p>
             <a class="ds-btn ds-btn--primary ds-btn--lg" href="#">Assinar</a>

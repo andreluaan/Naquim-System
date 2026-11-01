@@ -11,7 +11,7 @@ export const OPTIONS = {
     label: 'Paleta',
     hint: 'O humor das cores.',
     items: [
-      { id: 'sumi', name: 'Sumi', desc: 'A tinta-mãe · padrão', swatch: ['oklch(0.175 0.014 265)', 'oklch(0.3 0.014 265)', 'oklch(0.9 0.035 85)'] },
+      { id: 'sumi', name: 'Sumi', desc: 'A tinta-mãe · padrão', swatch: ['oklch(0.175 0 0)', 'oklch(0.3 0 0)', 'oklch(0.95 0 0)'] },
       { id: 'neutro', name: 'Carvão', desc: 'Tinta pura, sem pigmento', aguada: [0, 0, 0.92] },
       { id: 'vitrine', name: 'Vitrine', desc: 'Carvão em papel quente', aguada: [80, 0.15, 0.93] },
       { id: 'grade', name: 'Verde-água', desc: 'Pouco verde, muita água', aguada: [150, 0.45, 0.93] },

@@ -103,18 +103,20 @@
   text-align: center;
 }
 
-.ds-paper-hero--stage .ds-diorama {
-  border: var(--ds-space-4) solid var(--ds-color-surface);
-  box-shadow: var(--ds-shadow-lg);
-}
-
 .ds-paper-hero__kanji {
   writing-mode: vertical-rl;
-  justify-self: end;
+  justify-self: start;
   color: var(--ds-color-text);
   font-family: var(--ds-font-display);
-  font-size: var(--ds-text-7xl);
+  font-size: var(--ds-text-5xl);
   line-height: 1;
+}
+
+.ds-paper-hero__mark {
+  display: flex;
+  gap: var(--ds-space-3);
+  align-items: flex-end;
+  margin-bottom: var(--ds-space-6);
 }
 
 @container (min-width: 760px) {
@@ -132,7 +134,11 @@
 
 .ds-diorama {
   overflow: hidden;
-  background: var(--ds-color-surface-active);
+}
+
+/* Janelas verticais estreitas sobre a pintura, como tiras de um biombo. */
+.ds-diorama--strips {
+  clip-path: polygon(22% 4%, 40% 4%, 40% 82%, 22% 82%, 22% 4%, 54% 18%, 72% 18%, 72% 96%, 54% 96%, 54% 18%);
 }
 
 .ds-diorama svg {
@@ -141,18 +147,18 @@
 }
 
 .ds-diorama__sun {
-  fill: var(--ds-color-accent);
+  fill: var(--ds-color-text);
 }
 
 .ds-diorama__layer {
-  filter: drop-shadow(-3px -4px 5px hsl(var(--ds-shadow-color) / var(--ds-shadow-strength)));
+  fill: var(--ds-color-text);
 }
 
-.ds-diorama__layer:nth-of-type(1) { fill: var(--ds-color-surface-hover); }
-.ds-diorama__layer:nth-of-type(2) { fill: var(--ds-color-border); }
-.ds-diorama__layer:nth-of-type(3) { fill: var(--ds-color-border-strong); }
-.ds-diorama__layer:nth-of-type(4) { fill: var(--ds-color-text-muted); }
-.ds-diorama__layer:nth-of-type(5) { fill: var(--ds-color-text); }
+.ds-diorama__layer:nth-of-type(1) { opacity: 0.12; }
+.ds-diorama__layer:nth-of-type(2) { opacity: 0.26; }
+.ds-diorama__layer:nth-of-type(3) { opacity: 0.48; }
+.ds-diorama__layer:nth-of-type(4) { opacity: 0.74; }
+.ds-diorama__splash { fill: var(--ds-color-text); }
 
 @media (prefers-reduced-motion: no-preference) {
   @supports (animation-timeline: view()) {
@@ -233,8 +239,6 @@
   transition: transform var(--ds-duration-base) var(--ds-ease-out);
 }
 
-.ds-stack__sheet:nth-child(odd) { transform: rotate(-1.2deg); }
-.ds-stack__sheet:nth-child(even) { transform: rotate(1deg) translateY(var(--ds-space-4)); }
 .ds-stack__sheet:hover { transform: translateY(calc(var(--ds-space-2) * -1)); }
 
 .ds-stack__sheet--ink {

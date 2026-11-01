@@ -39,3 +39,4 @@ para posts (LinkedIn, portfólio).
 | 017 | 2026-10-28 | [Site completo organizado por modelo](017-site-completo-modelos.md) | Modelos em cartões, índice de seções preso no topo e acessibilidade em 100 |
 | 018 | 2026-11-01 | [De Nanquim a Sumi](018-sumi.md) | Novo nome, estética japonesa, logo ensō e selo vermelho |
 | 019 | 2026-11-01 | [Mundo de papel](019-mundo-de-papel.md) | Selo preto e branco, matéria de papel, recapitulação e quatro sites novos |
+| 020 | 2026-11-01 | [Preto e branco](020-preto-e-branco.md) | Tema sem croma e cenários em pintura sumi-e, com referências do Pinterest |

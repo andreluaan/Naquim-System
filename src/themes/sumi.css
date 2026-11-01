@@ -1,25 +1,25 @@
-/* Tema padrão. Escuro é a tinta (preto-azulado) com destaque de papel; claro é o papel com destaque de tinta.
+/* Tema padrão: só tinta e papel, sem matiz. Escuro é a folha preta com traço branco; claro, o inverso.
    Com @scope, um trecho com data-mode próprio (uma faixa invertida) também troca de lado, e o tema para
    onde começa outro data-theme. */
 
 @scope (:root:not([data-theme]), [data-theme="sumi"]) to ([data-theme]) {
   :scope,
   [data-mode="dark"] {
-    --ds-neutral-hue: 265;
-    --ds-neutral-chroma: 0.014;
-    --ds-accent-hue: 85;
-    --ds-accent-chroma: 0.035;
-    --ds-accent-lightness: 0.9;
-    --ds-on-accent: oklch(0.2 0.02 265);
+    --ds-neutral-hue: 0;
+    --ds-neutral-chroma: 0;
+    --ds-accent-hue: 0;
+    --ds-accent-chroma: 0;
+    --ds-accent-lightness: 0.95;
+    --ds-on-accent: oklch(0.14 0 0);
   }
 
   :scope[data-mode="light"],
   [data-mode="light"] {
-    --ds-neutral-hue: 85;
-    --ds-neutral-chroma: 0.012;
-    --ds-accent-hue: 265;
-    --ds-accent-chroma: 0.05;
-    --ds-accent-lightness: 0.44;
-    --ds-on-accent: oklch(0.97 0.012 85);
+    --ds-neutral-hue: 0;
+    --ds-neutral-chroma: 0;
+    --ds-accent-hue: 0;
+    --ds-accent-chroma: 0;
+    --ds-accent-lightness: 0.16;
+    --ds-on-accent: oklch(0.98 0 0);
   }
 }

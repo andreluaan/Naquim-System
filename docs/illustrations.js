@@ -1,5 +1,5 @@
-const PAPER = 'oklch(0.94 0.02 85)';
-const INK = 'oklch(0.17 0.02 265)';
+const PAPER = 'oklch(0.95 0 0)';
+const INK = 'oklch(0.15 0 0)';
 
 const roughEdge = (id, scale, frequency = '0.035') => `
   <filter id="${id}-rough" x="-20%" y="-20%" width="140%" height="140%">

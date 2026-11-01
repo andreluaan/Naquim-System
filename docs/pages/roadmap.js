@@ -16,6 +16,7 @@ const ITEMS = [
   { name: 'Site completo organizado por modelo, índice de seções e auditoria de acessibilidade', status: 'feito' },
   { name: 'De Nanquim a Sumi: estética japonesa, logo ensō e selo', status: 'feito' },
   { name: 'Mundo de papel, selo preto e branco, recapitulação e quatro novos sites', status: 'feito' },
+  { name: 'Preto e branco puro e pintura sumi-e, com referências do Pinterest', status: 'feito' },
   { name: 'Pacote para usar em outros projetos (npm e CDN)', status: 'próximo' },
   { name: 'Primeiro site de cliente feito só com o Sumi', status: 'depois' },
 ];
