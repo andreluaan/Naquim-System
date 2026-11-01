@@ -1,4 +1,4 @@
-# Evolução do Nanquim System
+# Evolução do Sumi System
 
 Como o projeto mudou, versão a versão, em fotos. Cada versão tem uma **tag no git** (`git checkout v0.2.0` volta
 exatamente àquele estado), e todas as capturas abaixo foram feitas do mesmo jeito: mesmas telas, mesmo tamanho,
@@ -28,6 +28,7 @@ geradas a partir do próprio histórico com `npm run evolucao`.
 | [v0.13.0](#v0130--aguada-laboratório-de-paletas-vitrine-e-grade) | 2026-10-23 | Aguada, laboratório de paletas, Vitrine e Grade | 30 | 22 | Nanquim + 3 da aguada + marca de exemplo + cor livre |
 | [v0.13.1](#v0131--vitrine-padrão-e-painel-em-grade) | 2026-10-23 | Vitrine padrão e painel em grade | 30 | 22 | Nanquim + 3 da aguada + marca de exemplo + cor livre |
 | [v0.14.0](#v0140--site-completo-organizado-por-modelo) | 2026-10-28 | Site completo organizado por modelo | 30 | 22 | Nanquim + 3 da aguada + marca de exemplo + cor livre |
+| [v0.15.0](#v0150--de-nanquim-a-sumi) | 2026-11-01 | De Nanquim a Sumi | 31 | 23 | Sumi + 3 da aguada + marca de exemplo + cor livre |
 
 ### A mesma tela em cada versão
 
@@ -290,6 +291,22 @@ Todas as paletas no modo claro, depois do ajuste:
 | Antes (v0.13.1) | Depois (v0.14.0) |
 |---|---|
 | ![](evolucao/v0.13.1/03i-site-completo.png) | ![](evolucao/v0.14.0/03i-site-completo.png) |
+
+---
+
+## v0.15.0 — De Nanquim a Sumi
+
+*2026-11-01 · tag `v0.15.0` · diário: [018](018-sumi.md)*
+
+- Sistema, tema e documentação renomeados para Sumi
+- Fontes japonesas como padrão: Shippori Mincho e Zen Kaku Gothic New
+- Logo e favicon em ensō, o círculo zen de uma pincelada
+- Selo `ds-seal`, o carimbo vermelho, como única nota de cor
+- Princípios Kanso, Ma, Nōtan e Shibui na apresentação
+
+| Antes (v0.14.0) | Depois (v0.15.0) |
+|---|---|
+| ![](evolucao/v0.14.0/03i-site-completo.png) | ![](evolucao/v0.15.0/03i-site-completo.png) |
 
 ---
 
