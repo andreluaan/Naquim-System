@@ -31,6 +31,7 @@ geradas a partir do próprio histórico com `npm run evolucao`.
 | [v0.15.0](#v0150--de-nanquim-a-sumi) | 2026-11-01 | De Nanquim a Sumi | 31 | 23 | Sumi + 3 da aguada + marca de exemplo + cor livre |
 | [v0.16.0](#v0160--mundo-de-papel) | 2026-11-01 | Mundo de papel | 32 | 24 | Sumi + 3 da aguada + marca de exemplo + cor livre |
 | [v0.17.0](#v0170--preto-e-branco) | 2026-11-01 | Preto e branco | 32 | 24 | Sumi + 3 da aguada + marca de exemplo + cor livre |
+| [v0.18.0](#v0180--aberturas-de-web-design-japonês) | 2026-11-01 | Aberturas de web design japonês | 32 | 24 | Sumi + 3 da aguada + marca de exemplo + cor livre |
 
 ### A mesma tela em cada versão
 
@@ -338,6 +339,21 @@ Todas as paletas no modo claro, depois do ajuste:
 | Antes (v0.16.0) | Depois (v0.17.0) |
 |---|---|
 | ![](evolucao/v0.16.0/03i-site-completo.png) | ![](evolucao/v0.17.0/03i-site-completo.png) |
+
+---
+
+## v0.18.0 — Aberturas de web design japonês
+
+*2026-11-01 · tag `v0.18.0` · diário: [021](021-web-japones.md)*
+
+- Kanji gigante na Editora
+- Palavra-pôster no Festival
+- Corte diagonal na Casa de chá
+- Painéis preto e branco na Revista
+
+| Antes (v0.17.0) | Depois (v0.18.0) |
+|---|---|
+| ![](evolucao/v0.17.0/03i-site-completo.png) | ![](evolucao/v0.18.0/03i-site-completo.png) |
 
 ---
 
